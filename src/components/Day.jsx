@@ -8,7 +8,7 @@ import {
 import DayContext from "./DayContext";
 import { Week } from "./Week";
 import WeekNames from "./WeekNames";
-import MonthHeader from "./monthHeader";
+import MonthHeader from "./MonthHeader";
 import Month from "./Month";
 import { Year } from "./Year";
 import { fetchFullMonth, johnsNumber } from "../utils/geezCalander";
