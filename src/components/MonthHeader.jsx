@@ -35,9 +35,9 @@ const MonthHeader = () => {
     <>
       <div className="">
         <div className="status">{status}</div>
-        <div className="flex items-center justify-center gap-20 m-4 bg-amber-50 p-4">
+        <div className="flex items-center justify-center gap-5 lg:gap-20  bg-amber-50 m-4">
           <ChevronLeft onClick={lastMonthHandler} />
-          <span className="w-40 text-center"> {MonthNames(state.month)}</span>
+          <span className="sm:w-10 w-40 text-center "> {MonthNames(state.month)}</span>
           <span>{state.year}</span>
           <ChevronRight onClick={nextMonthHandler} />
         </div>

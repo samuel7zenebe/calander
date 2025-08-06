@@ -16,13 +16,17 @@ const Month = ({ withHeader, month, year }) => {
       {withHeader && (
         <h2 className="header"> {MonthNames(month || state.month)}</h2>
       )}
+      <thead>
       <WeekNames />
+      </thead>
+      <tbody>
       <Week month={month || state.month} year={year || state.year} week={1} />
       <Week month={month || state.month} year={year || state.year} week={2} />
       <Week month={month || state.month} year={year || state.year} week={3} />
       <Week month={month || state.month} year={year || state.year} week={4} />
       <Week month={month || state.month} year={year || state.year} week={5} />
       <Week month={month || state.month} year={year || state.year} week={6} />
+      </tbody>
     </table>
   );
 };
