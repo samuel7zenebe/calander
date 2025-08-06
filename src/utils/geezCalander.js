@@ -4,7 +4,7 @@ export const johnsNumber = (firstDay, month, year) => {
       (firstDay + (5500 + year + Math.floor((5500 + year) / 4)))) %
     7
   );
-};npm 
+};
 
 export const fetchFullMonth = (day, month, year) => {
   const days = [];
