@@ -1,0 +1,89 @@
+body {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+.wrapper {
+    background-color: #333333;
+}
+.monthContainer {
+        background-color: #464646;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 4px;
+}
+.flexBox {
+   display: flex;
+   flex-direction: row;
+   align-items: start;
+   justify-content: center;
+}
+.weekNames * {
+    color: #F04D23;
+    font-weight: 900;
+}
+.weekNames *:hover {
+    cursor: pointer;
+}
+.cell {
+    min-width: 40px;
+    min-height: 40px;
+    text-align: center;
+    margin-top: 2px;
+    padding-top: 20px;
+}
+.monthHeader {
+display:flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+height: 6vh;
+}
+.monthHeader * {
+    display: block;
+    text-align:center;  
+    font-size: 19px;
+    width: 100px;
+}
+
+.monthHeader :not(span){
+ width: 40px;
+}
+.monthHeader :not(span):hover{
+      scale: 1.02;
+      cursor: pointer;
+   }
+.inactive {
+    color: #7e7d7d;
+}
+.active {
+  font-weight: bold; 
+  color: #FFFFFF;
+  border-radius: 50%;
+}
+.today {
+    line-height: normal;
+    background-color:#F04D23;
+}
+.yearLayout {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 4;  
+}
+.header {
+    font-size: xx-large;
+    font-weight: 700;
+    color: rgb(230, 234, 235);   
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+}
+.activeMonth {
+    background-color: #1b1a1a;
+    border-radius: 10px;
+}
+.header {
+ color: #dadada;
+}
