@@ -3,12 +3,14 @@ import DayContext from "./DayContext";
 import { Week } from "./Week";
 import WeekNames from "./WeekNames";
 import { MonthNames } from "../utils/geezCalander";
+
+
 const Month = ({ withHeader, month, year }) => {
   const { state, dispatch } = useContext(DayContext);
   return (
     <table
       className={
-        state.month == month ? "monthContainer activeMonth" : "monthContainer"
+         `flex flex-col items-center justify-center text-center ${state.month === month ? "bg-amber-100 ":"bg-white"} border border-amber-100`
       }
     >
       {withHeader && (

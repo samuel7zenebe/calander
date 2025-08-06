@@ -1,15 +1,13 @@
-import "./style.css";
 
+const week_names = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 const WeekNames = () => {
   return (
-    <thead className="flexBox weekNames">
-      <th className="cell">MON</th>
-      <th className="cell">TUE</th>
-      <th className="cell">WED</th>
-      <th className="cell">THU</th>
-      <th className="cell">FRI</th>
-      <th className="cell">SAT</th>
-      <th className="cell">SUN</th>
+    <thead className="flex font-bold">
+     {
+      week_names.map((name)=>(
+        <th key={name} className="w-15 p-1 font-bold text-amber-900">{name}</th>
+      ))
+     }
     </thead>
   );
 };

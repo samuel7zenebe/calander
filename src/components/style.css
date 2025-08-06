@@ -1,4 +1,5 @@
-body {
+@import "tailwindcss";
+/* body {
     background-color: #333333;
     color: #FFFFFF;
 }
@@ -87,3 +88,4 @@ height: 6vh;
 .header {
  color: #dadada;
 }
+*/

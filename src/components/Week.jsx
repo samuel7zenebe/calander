@@ -8,16 +8,16 @@ export const Week = ({ month, year, week }) => {
   const weekDays = fetchFullMonth(1, month, year).filter((x) => x.week == week);
 
   return (
-    <tr className="flexBox">
+    <tr className="flex gap-4 font-bold w-100">
       {weekDays.map((x, index) => (
         <td
           onMouseOver={() => {}}
-          className={`${
-            x.day == today.day && x.month == today.month && x.year == today.year
-              ? "today cell"
+          className={`w-15 p-1  font-extralight ${
+            x.day == today.day && x.month == month && x.month == today.month && x.year == today.year
+              ? "font-bold bg-amber-500 text-white"
               : x.month == month
-              ? "active cell"
-              : "inactive cell"
+              ? "bg-amber-100 border border-white font-semibold"
+              : ""
           }`}
           key={index}
         >

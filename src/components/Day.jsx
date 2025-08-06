@@ -12,7 +12,7 @@ import MonthHeader from "./MonthHeader";
 import Month from "./Month";
 import { Year } from "./Year";
 import { fetchFullMonth, johnsNumber } from "../utils/geezCalander";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronRight, ChevronLeft, Calendar } from "lucide-react";
 
 const dateReducer = (state, action) => {
   switch (action.type) {
@@ -33,6 +33,7 @@ const dateReducer = (state, action) => {
       break;
   }
 };
+// DateTimeFormat will return us the current date in ethiopic calendar
 const [month, day, year] = Intl.DateTimeFormat("en-u-ca-ethiopic", {
   day: "numeric",
   month: "numeric",
@@ -41,6 +42,7 @@ const [month, day, year] = Intl.DateTimeFormat("en-u-ca-ethiopic", {
   .format(new Date())
   .split(" ")[0]
   .split("/");
+// user it to initialize the state 
 const initialState = {
   day: parseInt(day),
   month: parseInt(month),
@@ -50,13 +52,14 @@ const initialState = {
 const Day = () => {
   const [state, dispatch] = useReducer(dateReducer, initialState);
   const [today, setToday] = useState(initialState);
-  useEffect(() => {
-    console.log();
-  }, [state]);
   return (
     <DayContext.Provider value={{ state, dispatch, today }}>
+       <div className="hover:bg-amber-950 cursor-pointer w-fit p-4 text-white bg-amber-900 flex items-center justify-center max-w-screen">
+      <Calendar className="w-10" />
+      <h1 className="font-bold"> Today  {today.day}/{today.month}/{today.year}</h1>
+      </div>
       <MonthHeader />
-      <div className="wrapper">
+      <div>
         <Year />
       </div>
     </DayContext.Provider>
